@@ -1,0 +1,32 @@
+.banner {
+    margin-bottom: 50px;
+    
+    &-container {
+        padding-top: 10px;
+        background-color: var(--color-background-banner);
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+    
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        //align-items: center;
+        color: var(--color-grey);
+    }
+
+    &__descr {
+        max-width: 529px;
+        width: 100%;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &__img {
+        margin-bottom: -4px;
+
+        
+    }
+}

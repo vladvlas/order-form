@@ -1,0 +1,26 @@
+.overview {
+
+    margin-bottom: 50px;
+
+    &__wrapper {
+        max-width: 350px;
+        width: 100%;
+    }
+
+
+    &__descr {
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+
+    &__readmore {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 700;
+        color: var(--color-grey)
+    }
+}
