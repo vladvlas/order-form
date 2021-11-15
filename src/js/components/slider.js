@@ -27,7 +27,7 @@ let mySwiperNav = new Swiper (sliderNav, {
     slidesPerView: 3,
     spaceBetween: 15,
     freeMode: true,
-    loop: true,
+    loop: false,
     direction: 'vertical',
     navigation: {
         nextEl: '.swiper-button-next',
@@ -40,5 +40,9 @@ let mySwiper = new Swiper(slider, {
     thumbs: {
         swiper: mySwiperNav,
     },
-    effect: 'fade'
+    effect: 'fade',
+    effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
 })

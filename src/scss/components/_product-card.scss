@@ -28,6 +28,15 @@
         margin-bottom: 20px;
     }
 
+    &__rate {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__views {
+        margin-left: 10px;
+    }
+
     &__type {
         font-weight: 700;
         text-transform: uppercase;

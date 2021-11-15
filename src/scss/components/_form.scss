@@ -2,8 +2,8 @@ form {
     margin-bottom: 100px;
 }
 
-.form-block {
-    display: block;
+#regForm {
+    display: none;
     position: relative;
 }
 
@@ -199,21 +199,24 @@ form {
     background-color: var(--color-pag);
     border: none;
     border-radius: 50%;
+    z-index: 100;
 
     &:not(:first-child) p::after {
             content: '';
             position: absolute;
             top: -76px;
             left: 5px;
-            height: 76px;
+            height: 78px;
             width: 2px;
             background-color: var(--color-pag);
+            z-index: -100;
     }
 
     & p {
         display: inline;
         position: absolute;
-        top: 50%;
+        height: 22px;
+        top: 55%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
@@ -223,18 +226,39 @@ form {
   
   /* Mark the active step: */
   .step.active {
-    // box-sizing: border-box;
-    // padding: 6px;
+    position: relative;
     background-color: var(--color-blue);
-    //border: 1px solid #000;
 
     &:not(:first-child) p::after {
         background-color: var(--color-blue);
-}
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 48px;
+        height: 48px;
+        border: 1px solid var(--color-blue);
+        border-radius: 50%;
+        left: -6px;
+        top: -6px;
+    }
 
   }
+
+.step.finish {
+    background-color: var(--color-blue);
+
+    &:not(:first-child) p::after {
+        background-color: var(--color-blue);
+    }
+}
 
 .step-two {
     display: flex;
     justify-content: center;
+}
+
+.dnone {
+    display: none;
 }
