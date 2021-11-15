@@ -14,12 +14,26 @@ form {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+    }
+
+    &__background {
+        @include tablet {
+            max-width: 243px;
+            
+        }
     }
 
     &__content {
         display: flex;
         justify-content: space-between;
         padding-left: 170px;
+
+        @include tablet {
+            padding-left: 55px;
+            max-height: 273px;
+            
+        }
     }
 
     &__text {
@@ -35,6 +49,12 @@ form {
         font-size: 48px;
         line-height: 58px;  
         color: var(--color-grey);
+
+        @include tablet {
+            font-size: 30px;
+            line-height: 37px;
+            margin-bottom: 10px;
+        }
     }
 
     &__subtitle {
@@ -46,6 +66,12 @@ form {
         line-height: 48px;
         color: var(--color-black);
 
+        @include tablet {
+            font-size: 30px;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+
         &--wide {
             max-width: 700px;
         }
@@ -55,6 +81,11 @@ form {
         max-width: 470px;
         width: 100%;
         margin-bottom: 20px;
+
+        @include tablet {
+            margin-bottom: 10px;
+            
+        }
 
         & span {
             font-weight: 700;
@@ -73,6 +104,12 @@ form {
     &-list {
         padding-left: 60px;
         margin-bottom: 40px;
+
+        @include tablet {
+            padding-left: 20px;
+            margin-bottom: 10px;
+            
+        }
     }
 
 
@@ -99,6 +136,14 @@ form {
                 top: 17px;
                 left: 261px;
                 background-image: url(../../img/amazon.svg);
+                background-repeat: no-repeat;
+
+                @include tablet {
+                    background-image: url(../../img/amazon-mini.svg);
+                    left: 241px;
+                    top: 13px;
+                    
+                }
             }
         }
     }
@@ -109,8 +154,18 @@ form {
         max-width: 380px;
         width: 100%;
 
+        @include tablet {
+            max-width: 320px;
+            
+        }
+
         & .tab__btn {
             max-width: 179px;
+
+            @include tablet {
+                max-width: 150px;
+                
+            }
 
         }
     }
@@ -119,6 +174,11 @@ form {
 .tab-descr {
     position: relative;
     padding-left: 56px;
+
+    @include tablet {
+        padding-left: 34px;
+        
+    }
 
     &::before {
         content: '';
@@ -131,6 +191,16 @@ form {
         background-color: var(--color-black);
         background-repeat: no-repeat;
         background-position: center;
+
+        @include tablet {
+            width: 20px;
+            height: 20px;
+            
+        }
+
+        
+
+        
     }
 
     &--one {
@@ -138,6 +208,11 @@ form {
         &::before {
             background-position: 45% 50%;
             background-image: url(../../img/number-one.svg);
+
+            @include tablet {
+                background-image: url(../../img/number-one-small.svg);
+                
+            }
         }
     }
 
@@ -145,6 +220,11 @@ form {
 
         &::before {
             background-image: url(../../img/number-two.svg) !important;
+
+            @include tablet {
+                background-image: url(../../img/number-two-small.svg);
+                
+            }
         }
     }
 
@@ -152,6 +232,11 @@ form {
 
         &::before {
             background-image: url(../../img/number-three.svg) !important;
+
+            @include tablet {
+                background-image: url(../../img/number-three-small.svg);
+                
+            }
         }
     }
 
@@ -159,6 +244,11 @@ form {
 
         &::before {
             background-image: url(../../img/number-four.svg) !important;
+
+            @include tablet {
+                background-image: url(../../img/number-for-small.svg);
+                
+            }
         }
     }
 
@@ -166,6 +256,11 @@ form {
 
         &::before {
             background-image: url(../../img/gift.svg) !important;
+
+            @include tablet {
+                background-image: url(../../img/gift-small.svg);
+                
+            }
         }
     }
 }
@@ -187,9 +282,14 @@ form {
     flex-direction: column;
     top: 0;
     left: 0;
-    max-height: 450px;
+    height: 450px !important;
     height: 100%;
     width: 15px;
+
+    @include tablet {
+        height: 275px !important;
+        
+    }
 }
 
   .step {
@@ -201,15 +301,31 @@ form {
     border-radius: 50%;
     z-index: 100;
 
+    @include tablet {
+        width: 23px;
+        height: 23px;
+        
+    }
+
     &:not(:first-child) p::after {
             content: '';
             position: absolute;
             top: -76px;
-            left: 5px;
-            height: 78px;
+            left: 4px;
+            height: 72px;
             width: 2px;
             background-color: var(--color-pag);
             z-index: -100;
+            transition: all .3s;
+
+            @include tablet {
+                height: 43px;
+                width: 1px;
+                left: 3px;
+                top: -42px;
+                z-index: -100 !important;
+                
+            }
     }
 
     & p {
@@ -229,6 +345,8 @@ form {
     position: relative;
     background-color: var(--color-blue);
 
+
+
     &:not(:first-child) p::after {
         background-color: var(--color-blue);
     }
@@ -242,9 +360,22 @@ form {
         border-radius: 50%;
         left: -6px;
         top: -6px;
+
+        @include tablet {
+            width: 30px;
+            height: 30px;
+            left: -4px;
+            top: -4px;
+            
+        }
     }
 
   }
+
+.press-img {
+    width: 180px;
+    height: 50px;
+}
 
 .step.finish {
     background-color: var(--color-blue);

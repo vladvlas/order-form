@@ -13,6 +13,11 @@ html {
 body {
   margin: 0;
   font-family: "asd", sans-serif;
+
+  @include tablet {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 img {
@@ -53,6 +58,12 @@ p {
   border-radius: 5px;
   color: var(--color-white);
   background-color: var(--color-black);
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 12px 0;
+  }
 }
 
 .list-reset {
@@ -68,8 +79,12 @@ p {
   max-width: 1280px;
   font-family: 'Proxima Nova', sans-serif;
   font-weight: 400;
-  //background-color: var(--color-background-main);
   color: var(--color-grey);
+
+  @include tablet {
+    padding: 0 40px;
+    
+}
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -84,6 +99,11 @@ p {
   line-height: 58px;
   font-weight: 700;
   color: var(--color-black);
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .subtitle {
@@ -94,4 +114,9 @@ p {
   line-height: 22px;
   font-weight: 700;
   color: var(--color-black);
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }

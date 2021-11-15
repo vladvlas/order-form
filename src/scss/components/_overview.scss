@@ -21,6 +21,11 @@
         font-size: 18px;
         line-height: 22px;
         font-weight: 700;
-        color: var(--color-grey)
+        color: var(--color-grey);
+
+        @include tablet {
+            font-size: 14px;
+            line-height: 17px;
+        }
     }
 }

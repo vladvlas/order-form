@@ -8,18 +8,25 @@
     }
 
     &__slider {
-        padding: 80px 30px;
+        padding: 40px 30px;
         margin-right: 50px;
         max-width: 650px;
         width: 100%;
-        height: 560px;
+        max-height: 560px;
         box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
+
+        @include tablet {
+            max-width: 354px;
+            max-height: 300px;
+            margin-right: 40px;
+        }
     }
 }
 
 
 .info {
+    padding-top: 10px;
 
     &__grade {
         display: flex;
@@ -51,6 +58,11 @@
         line-height: 30px;
         font-weight: 700;
         color: var(--color-black);  
+
+        @include tablet {
+            font-size: 18px;
+            line-height: 18px;
+        }
     }
 
     &__descr {
@@ -89,6 +101,11 @@
             font-size: 30px;
             line-height: 37px;
             color: var(--color-black);
+
+            @include tablet {
+                font-size: 18px;
+                line-height: 22px;
+            }
         }
     }
 
@@ -101,6 +118,13 @@
         justify-content: center;
         max-width: 380px;
         width: 100%;
+
+        img {
+            @include tablet {
+                max-width: 160px;
+                height: 28px;
+            }
+        }
         
     }
 }
