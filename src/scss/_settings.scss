@@ -6,6 +6,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -39,6 +41,18 @@ p {
   padding: 0;
   background: transparent;
   cursor: pointer;
+}
+
+.btn {
+  display: block;
+  padding: 19px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: var(--color-white);
+  background-color: var(--color-black);
 }
 
 .list-reset {

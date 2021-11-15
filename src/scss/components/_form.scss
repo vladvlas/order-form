@@ -1,0 +1,240 @@
+form {
+    margin-bottom: 100px;
+}
+
+.form-block {
+    display: block;
+    position: relative;
+}
+
+.tab {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 170px;
+    }
+
+    &__text {
+        margin-right: 10px;
+    }
+
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;  
+        color: var(--color-grey);
+    }
+
+    &__subtitle {
+        max-width: 406px;
+        width: 100%;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        color: var(--color-black);
+
+        &--wide {
+            max-width: 700px;
+        }
+    }
+
+    &__descr {
+        max-width: 470px;
+        width: 100%;
+        margin-bottom: 20px;
+
+        & span {
+            font-weight: 700;
+        }
+
+        &--less-magin {
+            max-width: 400px;
+            margin-bottom: 10px;
+        }
+
+        &--italic {
+            font-style: italic;
+        }
+    }
+
+    &-list {
+        padding-left: 60px;
+        margin-bottom: 40px;
+    }
+
+
+    &__btn {
+        font-weight: 700;
+        margin-bottom: 20px;
+
+        &--grey {
+            background-color: var(--color-grey);
+        }
+        &--opacity {
+            background-color: transparent;
+            color: var(--color-grey);
+        }
+
+        &--logo {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 24px;
+                top: 17px;
+                left: 261px;
+                background-image: url(../../img/amazon.svg);
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        max-width: 380px;
+        width: 100%;
+
+        & .tab__btn {
+            max-width: 179px;
+
+        }
+    }
+}
+
+.tab-descr {
+    position: relative;
+    padding-left: 56px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        background-color: var(--color-black);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &--one {
+
+        &::before {
+            background-position: 45% 50%;
+            background-image: url(../../img/number-one.svg);
+        }
+    }
+
+    &--two {
+
+        &::before {
+            background-image: url(../../img/number-two.svg) !important;
+        }
+    }
+
+    &--three {
+
+        &::before {
+            background-image: url(../../img/number-three.svg) !important;
+        }
+    }
+
+    &--four {
+
+        &::before {
+            background-image: url(../../img/number-four.svg) !important;
+        }
+    }
+
+    &--gift {
+
+        &::before {
+            background-image: url(../../img/gift.svg) !important;
+        }
+    }
+}
+
+/* Style the form */
+
+  
+  
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+  
+
+.pagination{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    max-height: 450px;
+    height: 100%;
+    width: 15px;
+}
+
+  .step {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-pag);
+    border: none;
+    border-radius: 50%;
+
+    &:not(:first-child) p::after {
+            content: '';
+            position: absolute;
+            top: -76px;
+            left: 5px;
+            height: 76px;
+            width: 2px;
+            background-color: var(--color-pag);
+    }
+
+    & p {
+        display: inline;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        color: var(--color-white)
+    }
+  }
+  
+  /* Mark the active step: */
+  .step.active {
+    // box-sizing: border-box;
+    // padding: 6px;
+    background-color: var(--color-blue);
+    //border: 1px solid #000;
+
+    &:not(:first-child) p::after {
+        background-color: var(--color-blue);
+}
+
+  }
+
+.step-two {
+    display: flex;
+    justify-content: center;
+}
