@@ -2,6 +2,8 @@
 
     
 
+    
+
     &__title {
         margin-bottom: 20px;
     }
@@ -12,32 +14,90 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 100px;
+    
+
+    @include very-small-mobile {
+        flex-wrap: wrap;
+        max-width: 248px;
+        max-height: 492px;
+        margin-bottom: 40px;
+    }
 }
 
 .point {
     position: relative;
-    margin-bottom: 100px;
     text-align: center;
+
+    @include small-desktop1220 {
+        width: 160px;
+        height: 160px;
+    }
+
+    @include tablet {
+        width: 105px;
+        height: 105px;
+    }
+
+    @include very-small-mobile {
+        margin-bottom: 28px;
+    }
+
+
+    &:last-child {
+        @include very-small-mobile {
+            margin: 0 auto;
+            margin-bottom: 28px;
+        }
+    }
+
+    &:nth-child(2n + 1) &__content::after {
+        @include very-small-mobile {
+        position: absolute;
+        content: '';
+        width: 15px !important;
+        height: 10px !important;
+        right: -20px;
+        background-image: url(../../img/right.svg);
+        background-size: cover;
+        }
+    }
+
+    &:last-child &__content::after {
+        @include very-small-mobile {
+            width: 0 !important;
+            height: 0 !important;
+        }
+    }
 
     &:not(:last-child) &__content::after {
         position: absolute;
-            content: '';
-            width: 24px;
-            height: 16px;
-            right: -49px;
-            background-image: url(../../img/right.svg);
-            background-size: cover;
+        content: '';
+        width: 24px;
+        height: 16px;
+        right: -49px;
+        background-image: url(../../img/right.svg);
+        background-size: cover;
 
-            @include small-desktop1123 {
-                right: -40px;
-            }
+        @include tablet {
+            right: -34px;
+        }
 
-            @include small-desktop1050 {
-                width: 16px;
-                height: 12px;
-                right: -23px;
+        @include small-desktop1220 {
+            width: 15px !important;
+            height: 10px !important;
+            right: -30px;
+        }
 
-            }
+
+        @include mobile {
+            right: -27px;
+        }
+
+        @include very-small-mobile {
+            width: 0;
+            height: 0;
+        }
     }
 
     &__content {
@@ -51,19 +111,9 @@
         border-radius: 50%;
         box-shadow: 0px 10px 20px rgba(94, 94, 94, 0.1);
 
-        @include small-desktop {
+        @include small-desktop1220 {
             width: 160px;
             height: 160px;
-        }
-
-        @include small-desktop1123 {
-            width: 140px;
-            height: 140px;
-        }
-
-        @include small-desktop1050 {
-            width: 130px;
-            height: 130px;
         }
 
         @include tablet {
@@ -74,12 +124,6 @@
 
         img {
             margin: 0 auto;
-
-            @include small-desktop1050 {
-                width: 40%;
-                height: 40%;
-
-            }
         }
 
 
@@ -88,6 +132,10 @@
     &__title {
         font-weight: 700;
         color: var(--color-black);
+
+        @include very-small-mobile {
+            max-width: 93px;
+        }
     }
 }
 

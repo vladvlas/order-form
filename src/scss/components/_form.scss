@@ -1,5 +1,9 @@
 form {
     margin-bottom: 100px;
+
+    @include very-small-mobile {
+        margin-bottom: 0px;
+    }
 }
 
 #regForm {
@@ -22,6 +26,10 @@ form {
             max-width: 243px;
             
         }
+
+        @include very-small-mobile {
+            display: none;
+        }
     }
 
     &__content {
@@ -33,6 +41,13 @@ form {
             padding-left: 55px;
             max-height: 273px;
             
+        }
+
+        @include very-small-mobile {
+            padding-top: 50px;
+            padding-left: 0;
+            flex-direction: column;
+            max-height: 470px;
         }
     }
 
@@ -55,6 +70,12 @@ form {
             line-height: 37px;
             margin-bottom: 10px;
         }
+
+        @include very-small-mobile {
+            font-size: 20px;
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
     }
 
     &__subtitle {
@@ -70,6 +91,11 @@ form {
             font-size: 30px;
             line-height: 30px;
             margin-bottom: 10px;
+        }
+
+        @include very-small-mobile {
+            font-size: 20px;
+            line-height: 20px;
         }
 
         &--wide {
@@ -144,6 +170,10 @@ form {
                     top: 13px;
                     
                 }
+
+                @include very-small-mobile {
+                    left: 194px;
+                }
             }
         }
     }
@@ -159,6 +189,10 @@ form {
             
         }
 
+        @include very-small-mobile {
+            max-width: 280px;
+        }
+
         & .tab__btn {
             max-width: 179px;
 
@@ -166,6 +200,12 @@ form {
                 max-width: 150px;
                 
             }
+
+            @include very-small-mobile {
+                max-width: 130px;
+            }
+
+
 
         }
     }
@@ -290,6 +330,12 @@ form {
         height: 275px !important;
         
     }
+
+    @include very-small-mobile {
+        flex-direction: row;
+        width: 280px;
+        height: 30px !important;
+    }
 }
 
   .step {
@@ -325,6 +371,13 @@ form {
                 top: -42px;
                 z-index: -100 !important;
                 
+            }
+
+            @include very-small-mobile {
+                top: 9px;
+                left: -49px;
+                height: 2px;
+                width: 42px;
             }
     }
 
@@ -385,11 +438,27 @@ form {
     }
 }
 
-.step-two {
-    display: flex;
-    justify-content: center;
+.post {
+    display: block;
+
+    & img {
+        @include very-small-mobile {
+        max-width: 225px;
+        
+    }
+    }
+
+    
+
+    @include very-small-mobile {
+        display: flex;
+        justify-content: center;
+        max-width: 280px;
+    }
 }
 
-.dnone {
-    display: none;
-}
+
+// .step-two {
+//     display: flex;
+//     justify-content: center;
+// }

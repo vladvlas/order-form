@@ -2,24 +2,44 @@
 
     margin-bottom: 50px;
 
+    @include tablet {
+        margin-bottom: 0px;
+    }
+
     &__content {
         display: flex;
         justify-content: space-between;
+
+        @include very-small-mobile {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__slider {
-        padding: 40px 30px;
+        padding: 80px 30px;
         margin-right: 50px;
         max-width: 650px;
         width: 100%;
-        max-height: 560px;
+        height: 560px;
+        //height: 100%;
         box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
 
         @include tablet {
+            padding: 44px 17px;
+            height: 300px;
             max-width: 354px;
             max-height: 300px;
             margin-right: 40px;
+        }
+
+        @include very-small-mobile {
+            max-height: 256px;
+            margin-right: 0;
+            margin-bottom: 25px;
+            padding: 37px 12px;
+
         }
     }
 }
@@ -33,6 +53,11 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 20px;
+
+        @include tablet {
+            margin-bottom: 30px;
+        }
+
     }
 
     &__rate {
@@ -62,11 +87,20 @@
         @include tablet {
             font-size: 18px;
             line-height: 18px;
+            margin-bottom: 10px;
         }
+    }
+
+    &__subtitle {
+        margin-bottom: 3px;
     }
 
     &__descr {
         margin-bottom: 30px;
+
+        @include tablet {
+            margin-bottom: 15px;
+        }
     }
 
     &__count {
@@ -78,6 +112,10 @@
         text-transform: uppercase;
         background-color: var(--color-red);
         color: var(--color-white);
+
+        @include tablet {
+            margin-bottom: 15px;
+        }
     }
 
     &__prices {
@@ -86,6 +124,10 @@
         max-width: 380px;
         width: 100%;
         border-top: 1px solid var(--color-line);
+
+        @include tablet {
+            padding-top: 15px;
+        }
     }
 
     &__price {

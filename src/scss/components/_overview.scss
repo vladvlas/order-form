@@ -5,6 +5,8 @@
     &__wrapper {
         max-width: 350px;
         width: 100%;
+
+        
     }
 
 
@@ -28,4 +30,12 @@
             line-height: 17px;
         }
     }
+}
+
+.overview-container {
+    // @include very-small-mobile {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    // }
 }

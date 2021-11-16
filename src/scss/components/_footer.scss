@@ -2,7 +2,6 @@
 
     &-container {
         padding-top: 30px;
-        padding-bottom: 50px;
         background-color: var(--color-background-footer);
 
     }
@@ -10,8 +9,11 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         max-width: 752px;
         width: 100%;
+
+        
     }
 
     &__bottom {
@@ -24,6 +26,12 @@
 }
 
 .column {
+
+    width: 100px;
+    
+    &:not(:last-child) {
+        margin-bottom: 28px;
+    }
 
     &__item {
         margin-bottom: 10px;

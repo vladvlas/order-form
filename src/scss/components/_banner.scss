@@ -1,21 +1,33 @@
 .banner {
     margin-bottom: 50px;
+
+    @include very-small-mobile {
+        margin-bottom: 20px;
+    }
     
     &-container {
         padding-top: 10px;
-        padding-bottom: 5px;
+        //padding-bottom: 5px;
         background-color: var(--color-background-banner);
     }
 
     &__title {
         margin-bottom: 10px;
+
+        @include very-small-mobile {
+            text-align: center;
+        }
     }
     
     &__link {
         display: flex;
         justify-content: space-between;
-        //align-items: center;
         color: var(--color-grey);
+
+        @include very-small-mobile {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__descr {
@@ -29,14 +41,36 @@
             line-height: 19px;
             max-width: 353px;
         }
+
+        @include very-small-mobile {
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+        }
+
+
     }
 
     &__img {
-        margin-bottom: -4px;
+        // margin-bottom: -4px;
+        display: inline;
+        
+        img {
 
-        @include tablet {
-            width: 240px;
-            height: 90px;
+            // @include tablet1158 {
+            //     @include tablet {
+            //         max-width: 280px;
+            //         height: 110px;
+            //     }
+            // }
+
+            @include tablet {
+                width: 240px;
+                height: 90px;
+            }
         }
+        
+
+        
     }
 }

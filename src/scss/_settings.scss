@@ -18,6 +18,8 @@ body {
     font-size: 12px;
     line-height: 15px;
   }
+
+
 }
 
 img {
@@ -83,8 +85,13 @@ p {
 
   @include tablet {
     padding: 0 40px;
-    
-}
+    max-width: 768px;
+  }
+
+  @include very-small-mobile {
+    padding: 0 20px;
+    max-width: 320px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -104,14 +111,19 @@ p {
     font-size: 30px;
     line-height: 37px;
   }
+
+  @include very-small-mobile {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .subtitle {
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 12px;
+  line-height: 15px;
   font-weight: 700;
   color: var(--color-black);
 
